@@ -1,0 +1,9 @@
+<stack>
+  <description brief="bosch_3rdparty">bosch_3rdparty</description>
+  <author>Maintained by Dejan Pangercic</author>
+  <license>BSD,GPL,LGPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/bosch_3rdparty</url>
+  <depend stack="ros" />
+
+</stack>
