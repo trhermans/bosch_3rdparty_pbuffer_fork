@@ -1,0 +1,26 @@
+Index: vcg/complex/trimesh/geodesic.h
+===================================================================
+--- vcg/complex/trimesh/geodesic.h	(revision 3794)
++++ vcg/complex/trimesh/geodesic.h	(working copy)
+@@ -380,7 +380,7 @@
+ 			fro.push_back(&(*vi));
+ 	if(fro.empty()) return false;
+ 	
+-	tri::UpdateQuality<CMeshO>::VertexConstant(m,0);
++	tri::UpdateQuality<MeshType>::VertexConstant(m,0);
+ 		
+ 	return FarthestVertex(m,fro,farthest,distance,sources);
+ }
+Index: wrap/gl/glu_tesselator.h
+===================================================================
+--- wrap/gl/glu_tesselator.h	(revision 3794)
++++ wrap/gl/glu_tesselator.h	(working copy)
+@@ -44,7 +44,7 @@
+ #define __VCGLIB_GLU_TESSELATOR_H
+ 
+ #include <vector>
+-//#include <GL/glu.h>
++#include <GL/glu.h>
+ 
+ #ifndef CALLBACK
+ #ifdef _WIN32

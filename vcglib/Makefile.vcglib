@@ -1,0 +1,17 @@
+all: installed
+
+##INSTALL_DIR = $(shell rospack find vcglib)/vcglib-svn/vcglib
+
+SVN_DIR = vcglib-svn/vcglib
+SVN_URL = https://vcg.svn.sourceforge.net/svnroot/vcg/trunk/vcglib
+SVN_REVISION = -r 3794
+SVN_PATCH = vcglib.patch
+include $(shell rospack find mk)/svn_checkout.mk
+
+
+installed: $(SVN_DIR) 
+		ln -s -f -T vcglib-svn include 
+		touch installed
+
+
+
